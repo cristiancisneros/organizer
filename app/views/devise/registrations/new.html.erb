@@ -1,0 +1,93 @@
+<body class='contrast-red login contrast-background'>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  
+    <div class='middle-container'>
+      <div class='middle-row'>
+        <div class='middle-wrapper'>
+          <div class='login-container-header'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='text-center'>
+                    <img width="121" height="31" src="/assets/logo_lg.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='login-container'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4'>
+                  <h1 class='text-center title'>Sign up</h1>
+                  <form action='/' method='get'>
+                    <div class='form-group'>
+                      <div class='controls with-icon-over-input'>
+                        <%= f.label :email %><br />
+                        <%= f.email_field :email, autofocus: true %>
+                        <input value="" placeholder="Email" class="form-control" name="email" type="text" />
+                        <i class='icon-user text-muted'></i>
+                      </div>
+                    </div>
+                    <div class='form-group'>
+                      <div class='controls with-icon-over-input'>
+                         <%= f.label :password %>
+                         <% if @validatable %>
+                         <em>(<%= @minimum_password_length %> characters minimum)</em>
+                         <% end %><br />
+                         <%= f.password_field :password, autocomplete: "off" %>
+                        <input value="" placeholder="Password" class="form-control" name="password" type="password" />
+                        <i class='icon-lock text-muted'></i>
+                      </div>
+                    </div>
+                    <div class='form-group'>
+                      <div class='controls with-icon-over-input'>
+                         <%= f.label :password_confirmation %><br />
+                         <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                        <input value="" placeholder="Password confirmation" class="form-control" name="password_confirmation" type="password" />
+                        <i class='icon-lock text-muted'></i>
+                      </div>
+                    </div>
+                    <div class='checkbox'>
+                      <label for='agreement'>
+                        <input id='agreement' name='agreement' type='checkbox' value='1'>
+                        I accept
+                        <a class='text-contrast' href='#'>user agreements</a>
+                      </label>
+                    </div>
+                    <button class='btn btn-block'>Sign up</button>
+                    <%= f.submit "Sign up" %>
+                  </form>
+                  <div class='text-center'>
+                    <hr class='hr-normal'>
+                    <a href='/sign_in'>
+                      <i class='icon-chevron-left'></i>
+                      Go back to sign in
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='login-container-footer'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='text-center'>
+                    <a href='/forgot_password'>
+                      <i class='icon-lock'></i>
+                      Forgot your password?
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<% end %>
+

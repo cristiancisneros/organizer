@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: organizer_dev
+  pool: 5
+  host: localhost
+  username:
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: organizer_test
+  pool: 5
+  host: localhost
+  username:
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: organizer_prod
+  pool: 5
+  host: localhost
+  username:
+  password:

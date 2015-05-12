@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require theme-colors
+ *= require bootstrap/bootstrap
+ *= require jquery/jquery_ui
+ *= require plugins/bootstrap_colorpicker/bootstrap-colorpicker
+ *= require plugins/bootstrap_daterangepicker/bootstrap-daterangepicker
+ *= require plugins/bootstrap_datetimepicker/bootstrap-datetimepicker.min
+ *= require plugins/bootstrap_switch/bootstrap-switch
+ *= require plugins/common/bootstrap-wysihtml5
+ *= require plugins/datatables/bootstrap-datatable
+ *= require plugins/dynatree/ui.dynatree
+ *= require plugins/flags/flags
+ *= require plugins/fuelux/wizard
+ *= require plugins/fullcalendar/fullcalendar
+ *= require plugins/jgrowl/jquery.jgrowl.min
+ *= require plugins/jquery_fileupload/jquery.fileupload-ui
+ *= require plugins/lightbox/lightbox
+ *= require plugins/mention/mention
+ *= require plugins/select2/select2
+ *= require plugins/slider_nav/slidernav
+ *= require plugins/tabdrop/tabdrop
+ *= require dark-blue-theme
+ *= require dark-theme
+ *= require light-theme
+ *= require demo
+ *= require_self
+ */
+
+
