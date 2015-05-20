@@ -13,7 +13,7 @@ gem 'aws-sdk'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "awesome_print", require:"ap"
 gem 'quiet_assets', group: :development
-
+gem 'metamagic'
 
 group :development, :test do
   gem 'pg'

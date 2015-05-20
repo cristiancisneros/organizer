@@ -1,8 +1,9 @@
+<% if user_signed_in? %>
     <header>
       <nav class='navbar navbar-default'>
         <a class='navbar-brand' href='/'>
-          <img width="81" height="21" class="logo" alt="Flatty" src="assets/logo.svg" />
-          <img width="21" height="21" class="logo-xs" alt="Flatty" src="assets/logo_xs.svg" />
+          <img width="81" height="21" class="logo" alt="Flatty" src="/assets/logo.svg" />
+          <img width="21" height="21" class="logo-xs" alt="Flatty" src="/assets/logo_xs.svg" />
         </a>
         <a class='toggle-nav btn pull-left' href='#'>
           <i class='icon-reorder'></i>
@@ -15,14 +16,14 @@
             <ul class='dropdown-menu color-settings'>
               <li class='color-settings-body-color'>
                 <div class='color-title'>Body color</div>
-                <a data-change-to='assets/stylesheets/light-theme.css' href='#'>
+                <a data-change-to='/assets/stylesheets/light-theme.css' href='#'>
                   Light
                   <small>(default)</small>
                 </a>
-                <a data-change-to='assets/stylesheets/dark-theme.css' href='#'>
+                <a data-change-to='/assets/stylesheets/dark-theme.css' href='#'>
                   Dark
                 </a>
-                <a data-change-to='assets/stylesheets/dark-blue-theme.css' href='#'>
+                <a data-change-to='/assets/stylesheets/dark-blue-theme.css' href='#'>
                   Dark blue
                 </a>
               </li>
@@ -171,33 +172,22 @@
           </li>
           <li class='dropdown dark user-menu'>
             <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-              <img width="23" height="23" alt="Mila Kunis" src="assets/avatar.jpg" />
+              <img width="23" height="23" alt="Some Girl" src="/assets/avatar.jpg" />
               <span class='user-name'>Some Girl</span>
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu'>
               <li>
-                <a href='user_profile.html'>
-                  <i class='icon-user'></i>
-                  Profile
-                </a>
-              </li>
-              <li>
-                <a href='user_profile.html'>
-                  <i class='icon-cog'></i>
-                  Settings
-                </a>
+                  <i class='icon-user'></i> <%= link_to "Edit Profile", edit_user_registration_path %> 
               </li>
               <li class='divider'></li>
               <li>
-                <a href='sign_in.html'>
-                  <i class='icon-signout'></i>
-                  Sign out
-                </a>
+                  <i class='icon-signout'></i> <%= link_to "Logout", destroy_user_session_path, method: :delete %> 
               </li>
             </ul>
           </li>
         </ul>
+       
         <form action='search_results.html' class='navbar-form navbar-right hidden-xs' method='get'>
           <button class='btn btn-link icon-search' name='button' type='submit'></button>
           <div class='form-group'>
@@ -206,3 +196,4 @@
         </form>
       </nav>
     </header>
+<% end %>
