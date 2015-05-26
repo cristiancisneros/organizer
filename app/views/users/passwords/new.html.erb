@@ -1,16 +1,66 @@
-<h2>Forgot your password?</h2>
+<title>Forgot password | Organizer</title>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <body class='contrast-red login contrast-background'>
+    <div class='middle-container'>
+      <div class='middle-row'>
+        <div class='middle-wrapper'>
+          <div class='login-container-header'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='text-center'>
+                    <img width="121" height="31" src="/assets/logo_lg.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='login-container'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-sm-4 col-sm-offset-4'>
+                  <h1 class='text-center title'>Forgot password</h1>
+                  <form action='index.html' method='get'>
+                    <div class='form-group'>
+                      <div class='controls with-icon-over-input'>
+                       <%= f.email_field :email, autofocus: true, :placeholder => 'Email', class: "form-control" %>
+                        <i class='icon-user text-muted'></i>
+                      </div>
+                    </div>
+                    <%= f.submit "Send me the instructions", class: "btn btn-block" %>
+                  </form>
+                  <div class='text-center'>
+                    <hr class='hr-normal'>
+                      <i class='icon-chevron-left'></i>
+                      <%= link_to "I already know my password", new_user_session_path %>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='login-container-footer'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='text-center'>
+                    <i class='icon-user'></i>
+                      New to Organizer?
+                      <%= link_to "Sign Up", new_user_registration_path %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </body>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "devise/shared/links" %>
+
