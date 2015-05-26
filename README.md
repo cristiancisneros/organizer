@@ -1,19 +1,13 @@
-Organizer
+<div align="center">
 
-* Ruby version 
+    <h1>Organizer</h1>
+    
+    <h2>Ruby On Rails App</h2>
+    
+    <h2><a href="http://organizer.cristiancisneros.com">http://organizer.cristiancisneros.com</a></h2>
+    
+    <h3>By</h3>
+    
+    <a href="http://www.cristiancisneros.com">Cristian Cisneros</a> 
 
-2.2.1
-
-* System dependencies
-
-PostgreSQL
-
-* Configuration
-* Database creation
-* Database initialization
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
-* ...
-
-
+</div>
