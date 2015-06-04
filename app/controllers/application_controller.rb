@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
 		devise_parameter_sanitizer.for(:account_update) << :name
 	end
 
+	def show
+  		set_meta_tags title: "your title",
+                      keywords: "your keywords",
+                	  description: "your description"
+    end
+
 end

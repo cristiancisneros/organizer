@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   def fileupload
   end
   
+@page_title       = 'Member Login'
+@page_description = 'Member login page.'
+@page_keywords    = 'Site, Login, Members'
+  
 end
