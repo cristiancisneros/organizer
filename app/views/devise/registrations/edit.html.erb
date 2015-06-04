@@ -74,17 +74,6 @@
                               <%= f.email_field :email, autofocus: true, :placeholder => 'Email', class: "form-control" %>
                             </div>
                             <hr class='hr-normal'>
-                            <div class='form-group'>
-                              <div class='controls'>
-                                <div class='checkbox'>
-                                  <label>
-                                    <input data-target='#change-password' data-toggle='collapse' id='changepasswordcheck' type='checkbox' value='option1'>
-                                    Change password?
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class='collapse' id='change-password'>
                               <div class='form-group'>
                                 <label>Password</label>
                                 <%= f.password_field :password, autocomplete: "off", :placeholder => 'Password', class: "form-control" %>
@@ -108,15 +97,16 @@
                           <div class='col-sm-7 col-sm-offset-1'>
                             <div class='form-group'>
                               <label>First name</label>
-                              <input class='form-control' id='firstname' placeholder='First name' type='text'>
+                              <%= f.first_field :first, autocomplete: "off", :placeholder => 'First Name', class: "form-control" %>
                             </div>
                             <div class='form-group'>
                               <label>Last name</label>
-                              <input class='form-control' id='lastname' placeholder='Last name' type='text'>
+                              <%= f.last_field :last, autocomplete: "off", :placeholder => 'Last Name', class: "form-control" %>
                             </div>
                             <hr class='hr-normal'>
                             <div class='form-group'>
                               <label>Bio</label>
+                              <%= f.bio_field :last, autocomplete: "off", :placeholder => 'Bio', class: "form-control" %>
                               <textarea class='autosize form-control' id='bio' placeholder='Bio'></textarea>
                             </div>
                           </div>
