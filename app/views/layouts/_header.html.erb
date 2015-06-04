@@ -1,30 +1,26 @@
-<% if user_signed_in? %>
-    <header>
-      <nav class='navbar navbar-default'>
-        <a class='navbar-brand' href='/'>
-          <img width="81" height="21" class="logo" alt="Flatty" src="/assets/logo.svg" />
-          <img width="21" height="21" class="logo-xs" alt="Flatty" src="/assets/logo_xs.svg" />
-        </a>
-        <a class='toggle-nav btn pull-left' href='#'>
-          <i class='icon-reorder'></i>
-        </a>
+<header>
+  <nav class='navbar navbar-default'>
+    <a class='navbar-brand' href='/'>
+      <img width="81" height="21" class="logo" alt="Flatty" src="/assets/logo.svg" />
+      <img width="21" height="21" class="logo-xs" alt="Flatty" src="/assets/logo_xs.svg" />
+    </a>
+    <% if user_signed_in? %>
+      <a class='toggle-nav btn pull-left' href='#'>
+        <i class='icon-reorder'></i>
+      </a>
         <ul class='nav'>
           <li class='dropdown light user-menu'>
             <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-              <img width="23" height="23" alt="Some Girl" src="/assets/avatar.jpg" />
-              <span class='user-name'>Name</span>
+              <%= image_tag(current_user.avatar.url)  %>
+              <span class='user-name'><%= current_user.first %></span>
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu'>
-              <li>
-                <%= link_to "Edit Profile", edit_user_registration_path, class: 'icon-user' %> 
-              </li>
-              <li>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'icon-signout' %> 
-              </li>
+                <li><%= link_to "Edit Profile", edit_user_registration_path, class: 'icon-user' %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'icon-signout' %></li>
             </ul>
           </li>
         </ul>
-      </nav>
-    </header>
-<% end %>
+    <% end %>
+  </nav>
+</header>

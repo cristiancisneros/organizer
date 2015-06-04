@@ -6,5 +6,7 @@ class PagesController < ApplicationController
   def calendar
   end
   
+  def fileupload
+  end
   
 end

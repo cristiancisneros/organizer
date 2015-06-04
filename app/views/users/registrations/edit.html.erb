@@ -44,17 +44,15 @@
                   <div class='col-sm-3 col-lg-2'>
                     <div class='box'>
                       <div class='box-content'>
-                        <img class="img-responsive" src="http://placehold.it/230x230&text=Photo" />
-                      </div>
-                    </div>
-                    <div class='box'>
-                      <div class='box-content'>
-                          <% if current_user.avatar.url.present? %>
-                            <%= image_tag(current_user.avatar.url) %>
+                          <% if @user.avatar.url.present? %>
+                            <%= image_tag(@user.avatar_url.to_s, :class => 'img-rounded img-responsive') if @user.avatar? %>
+                          <% else %>
+                            <img class="img-responsive" src="http://placehold.it/230x230&text=Photo" />
                           <% end %>
                       </div>
                       <div align="center" class='box-content'>
-                        <%= f.file_field :avatar, class: "img-responsive" %>
+                        <%= f.file_field :avatar, :class => 'img-responsive btn btn-primary start icon-upload icon-white' %>
+                        <%= f.hidden_field :avatar_cache %>
                       </div>
                     </div>
                   </div>
@@ -115,17 +113,12 @@
                               </div>
                             </div>
                           </fieldset>
-                          <div class='form-actions form-actions-padding' style='margin-bottom: 0;'>
                             <div class='text-right'>
-                              <div class='btn btn-primary btn-lg'>
                                  <%= f.submit "Save", class: "btn btn-primary btn-lg" %>
                                  <% end %>
-                              </div>
-                              <div class='btn btn-danger btn-lg'>
+                              <hr class='hr-normal'>
                                  <%= button_to "Delete my account", registration_path(resource_name), class: "btn btn-danger btn-lg",data: { confirm: "Are you sure?" }, method: :delete %>
-                              </div>
                             </div>
-                          </div>
                         </form>
                       </div>
                     </div>

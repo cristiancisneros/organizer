@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/address_book' => 'pages#address_book', as: :address_book
   get '/calendar' => 'pages#calendar', as: :calendar
   get '/dashboard' => 'pages#dashboard', as: :dashboard
+  get '/fileupload' => 'pages#fileupload', as: :fileupload
   get '/sign_in' => 'pages#sign_in', as: :sign_in
      
   
