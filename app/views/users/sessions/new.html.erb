@@ -45,7 +45,30 @@
                     </div>
                   </form>
 
-          <% end %>
+                    <div class='text-center'>
+                      <h3>or</h3>
+                      <hr class='hr-normal'>
+                        
+                        <%= link_to user_omniauth_authorize_path(:facebook) do%>
+                           <div class="btn-lg btn-block btn-social btn-facebook"> 
+                            <i class="fa fa-facebook"></i> Sign in with Facebook
+                           </div>
+                        <% end %>
+
+                        <%= link_to user_omniauth_authorize_path(:twitter) do%>
+                           <div class="btn-lg btn-block btn-social btn-twitter"> 
+                            <i class="fa fa-twitter"></i> Sign in with twitter
+                           </div>
+                        <% end %>
+
+                        <%= link_to user_omniauth_authorize_path(:github) do%>
+                           <div class="btn-lg btn-block btn-social btn-github"> 
+                            <i class="fa fa-github"></i> Sign in with Github
+                           </div>
+                        <% end %>
+
+                    </div>                  
+                  <% end %>
 
                   <div class='text-center'>
                     <hr class='hr-normal'>

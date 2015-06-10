@@ -21,6 +21,11 @@ gem "figaro"
 gem "mini_magick"
 gem 'meta-tags', :require => 'meta_tags'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
+
 group :development, :test do
   gem 'pg'
   gem 'byebug'

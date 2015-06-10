@@ -44,7 +44,7 @@
                       <%= f.submit "Sign in", class: "btn btn-block" %>
                     </div>
                   </form>
-
+                  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
           <% end %>
 
                   <div class='text-center'>
